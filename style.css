@@ -1,0 +1,167 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Container for the entire app */
+  .container {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Search bar styles */
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Error message */
+  .error {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  /* Loading spinner */
+  .loading {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  /* Result Section */
+  .result {
+    margin-top: 20px;
+  }
+  
+  .result h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .result h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  #gifContainer img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
